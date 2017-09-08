@@ -12,6 +12,10 @@ body {
 }
 header {
   width: 100%;
+
+}
+header .inner-box {
+  padding: 0.3rem 0;
 }
 .logo {
   display: flex;
@@ -19,6 +23,7 @@ header {
 }
 .logo img {
   padding: 0.66rem 1rem 0.5rem;
+  height: 1.5rem;
 }
 header h2 {
   font-size: 1rem;
@@ -112,4 +117,10 @@ section {
 }
 .info-1, .info-2 {
   width: 35%;
+}
+footer {
+  padding-top: 4rem;
+}
+footer h3 {
+  padding: 5rem 0;
 }
