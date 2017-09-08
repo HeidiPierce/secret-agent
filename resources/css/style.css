@@ -1,0 +1,69 @@
+/*body*/
+body {
+  font-family: Helvetica !important;
+  font-size: 18px !important;
+  color: white;
+  background-color: black;
+}
+/*header*/
+.inner-box {
+  width: 960px;
+  margin: 0 auto;
+}
+header {
+  width: 100%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  padding: 0.66rem 1rem 0.5rem;
+}
+header h2 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+/*bike container*/
+.bike-box {
+  background-image: url("../images/banner-motorcycle-img.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-weight: bold;
+  height: 25rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.bike-text {
+  background-color: black;
+  width: 25rem;
+  padding-left: 3rem;
+}
+.bike-text h4{
+  padding: 2rem 0 0.25rem;
+}
+.bike-text h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+/*menu container---this is how I got the items on the same line, spaced evenly*/
+nav {
+  background-color: firebrick;
+}
+.menu {
+  max-width: 960px;
+  margin: 0 auto;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  list-style: none;
+}
+a {
+  color: white;
+}
