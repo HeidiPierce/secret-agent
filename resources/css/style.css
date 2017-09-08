@@ -99,13 +99,17 @@ section {
 /*business info boxes*/
 .business-info {
   display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 3rem 0 4rem;
 }
-h3 {
+.business-info h3 {
   background-color: black;
+  padding: 1.5rem 2rem;
 }
 .business-info h4 {
   color: black;
 }
-.location, .hours {
-  flex: 1;
+.info-1, .info-2 {
+  width: 35%;
 }
