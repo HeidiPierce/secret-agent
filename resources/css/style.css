@@ -57,6 +57,12 @@ header h2 {
 /*menu container---this is how I got the items on the same line, spaced evenly*/
 nav {
   background-color: firebrick;
+
+}
+nav .response-menu {
+  display: none;
+  padding: 0.75rem 0;
+
 }
 .menu {
   max-width: 960px;
@@ -69,9 +75,9 @@ nav ul {
   padding: 0.75rem 0;
   list-style: none;
 }
-
 a {
   color: white;
+  text-decoration: none;
 }
 /*product gallery*/
 section {
@@ -101,7 +107,7 @@ section {
   padding: 0.5rem 0;
   width: 100%;
 }
-/*business info boxes*/
+/*business info boxes---this is how I fixed putting both info's side by side, with correct spacing & the background color the right size*/
 .business-info {
   display: flex;
   justify-content: space-between;
@@ -118,9 +124,35 @@ section {
 .info-1, .info-2 {
   width: 35%;
 }
+/*footer*/
 footer {
   padding-top: 4rem;
 }
 footer h3 {
   padding: 5rem 0;
+}
+
+/*responsive design*/
+@media only screen and (max-width: 1024px) {
+  .bike-text h4 {
+    font-size: 0.77rem;
+    font-weight: bold;
+  }
+  .bike-text h1 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  nav {
+    text-align: center;
+    padding: 10px;
+    height: 42px;
+  }
+  nav ul{
+    display: none;
+  }
+  nav .response-menu {
+    display: block;
+  }
+
+  }
 }
