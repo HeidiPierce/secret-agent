@@ -96,6 +96,7 @@ section {
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: auto;
 }
 .product img {
   margin: auto;
@@ -131,28 +132,72 @@ footer {
 footer h3 {
   padding: 5rem 0;
 }
-
 /*responsive design*/
 @media only screen and (max-width: 1024px) {
   .bike-text h4 {
     font-size: 0.77rem;
     font-weight: bold;
-  }
+}
   .bike-text h1 {
     font-size: 1rem;
     font-weight: bold;
-  }
+}
   nav {
     text-align: center;
     padding: 10px;
     height: 42px;
-  }
+}
   nav ul{
     display: none;
-  }
+}
   nav .response-menu {
     display: block;
+}
+  .products {
+    display: flex;
+    justify-content: space-betweeen;
+}
+  .product {
+    width: 46%;
+}
+  .product:last-child {
+    display: none;
+}
+  .business-info {
+    display: flex;
+}
+}
+@media only screen and (max-width: 470px) {
+  .logo img {
+    display: flex;
+    justify-content: center;
   }
+  header h2 {
+    display: none;
+  }
+  .bike-text {
+    font-weight: bold;
+    width: 100%;
+  }
+  .bike-text h3 {
+    font-size: 0.77rem;
+  }
+  .bike-text h1{
+    font-size: 1rem;
+  }
+  .products {
+    display: flex;
+    justify-content: center;
 
+  }
+  .product {
+    width: 90%;
+    overflow: hidden;
+  }
+  .product:nth-child(2) {
+    display: none;
+  }
+  footer h3 {
+    text-align: center;
   }
 }
