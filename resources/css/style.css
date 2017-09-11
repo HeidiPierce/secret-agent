@@ -7,12 +7,11 @@ body {
 }
 /*header*/
 .inner-box {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
 }
 header {
   width: 100%;
-
 }
 header .inner-box {
   padding: 0.3rem 0;
@@ -41,12 +40,15 @@ header h2 {
   display: flex;
   align-items: center;
 }
+.bike-box .inner-box {
+  width: 960px;
+}
 .bike-text {
   background-color: black;
   width: 25rem;
   padding-left: 3rem;
 }
-.bike-text h4{
+.bike-text h4 {
   padding: 2rem 0 0.25rem;
 }
 .bike-text h1 {
@@ -57,23 +59,21 @@ header h2 {
 /*menu container---this is how I got the items on the same line, spaced evenly*/
 nav {
   background-color: firebrick;
-
 }
 nav .response-menu {
   display: none;
   padding: 0.75rem 0;
-
 }
 .menu {
   max-width: 960px;
   margin: 0 auto;
 }
 nav ul {
+  padding: 0.75rem 0;
+  list-style: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 0;
-  list-style: none;
 }
 a {
   color: white;
@@ -85,18 +85,17 @@ section {
   margin: 0 auto;
 }
 .products {
+  padding: 2rem 20px 0;
   display: flex;
   justify-content: space-between;
-  padding: 3rem 0;
 }
 .product {
   border: 4px solid black;
   text-align: center;
   width: 30%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   height: auto;
+  display: flex;
+  flex-direction: column;
 }
 .product img {
   margin: auto;
@@ -110,10 +109,9 @@ section {
 }
 /*business info boxes---this is how I fixed putting both info's side by side, with correct spacing & the background color the right size*/
 .business-info {
+  padding: 2.5rem 15px 2rem;
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
-  padding: 3rem 0 4rem;
 }
 .business-info h3 {
   background-color: black;
@@ -121,9 +119,13 @@ section {
 }
 .business-info h4 {
   color: black;
+  padding: 20px 0 40px;
 }
 .info-1, .info-2 {
   width: 35%;
+}
+.info-2 h4 {
+  padding-bottom: 55px;
 }
 /*footer*/
 footer {
@@ -132,72 +134,86 @@ footer {
 footer h3 {
   padding: 5rem 0;
 }
-/*responsive design*/
-@media only screen and (max-width: 1024px) {
-  .bike-text h4 {
-    font-size: 0.77rem;
-    font-weight: bold;
-}
-  .bike-text h1 {
-    font-size: 1rem;
-    font-weight: bold;
-}
-  nav {
-    text-align: center;
-    padding: 10px;
-    height: 42px;
-}
-  nav ul{
-    display: none;
-}
-  nav .response-menu {
-    display: block;
-}
-  .products {
-    display: flex;
-    justify-content: space-betweeen;
-}
-  .product {
-    width: 46%;
-}
-  .product:last-child {
-    display: none;
-}
-  .business-info {
-    display: flex;
-}
-}
-@media only screen and (max-width: 470px) {
-  .logo img {
-    display: flex;
-    justify-content: center;
-  }
-  header h2 {
-    display: none;
-  }
-  .bike-text {
-    font-weight: bold;
-    width: 100%;
-  }
-  .bike-text h3 {
-    font-size: 0.77rem;
-  }
-  .bike-text h1{
-    font-size: 1rem;
-  }
-  .products {
-    display: flex;
-    justify-content: center;
-
-  }
-  .product {
-    width: 90%;
-    overflow: hidden;
-  }
-  .product:nth-child(2) {
-    display: none;
-  }
-  footer h3 {
-    text-align: center;
-  }
-}
+/*responsive design: 1024px*/
+    @media only screen and (max-width: 1024px) {
+      .bike-text {
+        font-weight: bold;
+      }
+      .bike-text h4 {
+        font-size: 0.77rem;
+      }
+      .bike-text h1 {
+        font-size: 1rem;
+      }
+      nav {
+        text-align: center;
+        padding: 10px;
+        height: 42px;
+      }
+      nav .response-menu {
+        display: block;
+      }
+      nav ul {
+        display: none;
+      }
+      .products {
+        justify-content: space-between;
+      }
+      .product {
+        width: 46%;
+      }
+      .product:last-child {
+        display: none;
+      }
+    }
+    /*responsive design: 470px*/
+    @media only screen and (max-width: 470px) {
+      .logo {
+        justify-content: center;
+      }
+      header h2 {
+        display: none;
+      }
+      .bike-box {
+        height: 15rem;
+        width: 100%;
+        align-items: flex-end;
+      }
+      .bike-box .inner-box {
+        align-items: flex-end;
+      }
+      .bike-box url {
+        height: 10rem;
+      }
+      .bike-text {
+        font-weight: bold;
+        width: 100%;
+        padding-left: 2rem;
+      }
+      .bike-text h3 {
+        font-size: 0.77rem;
+        padding-top: 1rem;
+      }
+      .bike-text h1{
+        font-size: 1rem;
+      }
+      .products {
+        justify-content: center;
+      }
+      .product {
+        width: 90%;
+      }
+      .product:nth-child(2) {
+        display: none;
+      }
+      .business-info {
+        flex-direction: column;
+      }
+      .info-1, .info-2 {
+        width: 90%;
+        margin: 0 auto;
+      }
+      footer h3 {
+        text-align: center;
+      }
+    }
